@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lab</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="./"><img src="./img/logo.png" alt="Logo" class="logo-icon"></a>
+                <h1>CSSLAB</h1>
+            </div>
+            <nav class="nav">
+                <a href="#como-funciona">Sobre</a>
+                <a href="#aulas">Aulas</a>
+                <a href="#hacks">Hacks CSS</a>
+                <a href="#recursos">Recursos</a>
+                <a href="https://github.com/rhayssakramer/css-lab" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="sobre">
+        <div class="hero-content">
+            <h1>Aprenda CSS do Zero</h1>
+            <p>Conteúdo interativo e prático sobre CSS moderno, layouts, animações e muito mais. Sem frameworks, sem complicação. Você abre no navegador e mexe.</p>
+            
+            <!-- STATS COMPACTO -->
+            <div class="stats stats-compact">
+                <div class="stat-item">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Aulas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Propriedades</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Possibilidades</span>
+                </div>
+            </div>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.querySelector('#aulas').scrollIntoView({behavior: 'smooth'})">Ver as aulas</button>
+                <button class="btn btn-secondary" onclick="document.querySelector('#como-funciona').scrollIntoView({behavior: 'smooth'})">Como funciona</button>
+            </div>
+        </div>
+        <div class="hero-illustration">
+            <img src="./img/css-3d.webp" alt="CSS Code" class="hero-image">
+        </div>
+    </section>
+
+     <!-- COMO FUNCIONA -->
+    <section class="como-funciona" id="como-funciona">
+        <div class="como-funciona-header">
+            <span class="como-label">O QUE É ISSO AQUI</span>
+            <h2>Um curso de CSS <span class="destaque">com formato inovador</span>.</h2>
+            <p>Cada aula é uma página interativa de tela única. Sem PDF, sem slide cansado, sem framework. Você abre no navegador e mexe. Os estilos se recalculam ao vivo, os exemplos respondem ao mouse, e tudo é explicado de forma criativa e prática.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Interativo de verdade</h3>
+                <p>Sliders, matrizes clicáveis e animações ao vivo. Aprende mexendo.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Zero dependências</h3>
+                <p>HTML, CSS e JS puro. Abre direto no navegador, funciona offline.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Conceitos práticos</h3>
+                <p>Exemplos reais do dia a dia. Entender a teoria através da prática.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>CSS moderno</h3>
+                <p>Layouts, Flexbox, Grid, Animações. Sem frameworks ou pré-processadores.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AULAS -->
+    <section class="aulas" id="aulas">
+        <div class="aulas-header">
+            <span class="aulas-label">AS AULAS</span>
+            <h2>Escolha uma e <span class="destaque">simbora.</span></h2>
+            <p>Cada card é uma aula completa, independente. Pode começar pela 1 ou pular pra aula que te interessa mais. Os tópicos cobrem desde fundamentos até animações avançadas e otimizações. A aula 10 é dedicada aos <strong>hacks avançados de CSS</strong> que poucos conhecem.</p>
+        </div>
+        <div class="aulas-grid">
+            <!-- Cards gerados dinamicamente por JavaScript -->
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="hacks" id="hacks">
+        <h2>Hacks de <span class="destaque">CSS</span> que Você Precisa Saber</h2>
+        <div class="hacks-container">
+            <div class="hack-item">
+                <h4>1. CSS Custom Properties (Variáveis)</h4>
+                <p>Defina variáveis CSS e reutilize-as em todo o projeto. Fácil de manter e modificar.</p>
+                <code>:root { --primary: #ff6b35; } .btn { color: var(--primary); }</code>
+            </div>
+            <div class="hack-item">
+                <h4>2. Calc() para Layout Responsivo</h4>
+                <p>Combine unidades diferentes para criar layouts flexíveis sem media queries.</p>
+                <code>width: calc(100% - 2rem); padding: calc(1rem * 2);</code>
+            </div>
+            <div class="hack-item">
+                <h4>3. Grid com Auto-fit</h4>
+                <p>Crie grids responsivos sem media queries usando auto-fit.</p>
+                <code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code>
+            </div>
+            <div class="hack-item">
+                <h4>4. Aspect Ratio</h4>
+                <p>Mantenha proporções de aspecto sem hackear com padding.</p>
+                <code>aspect-ratio: 16 / 9;</code>
+            </div>
+            <div class="hack-item">
+                <h4>5. :has() Selector</h4>
+                <p>Selecione elementos baseado no conteúdo que contêm (seletores pai).</p>
+                <code>.container:has(> img) { display: flex; }</code>
+            </div>
+            <div class="hack-item">
+                <h4>6. Backdrop-filter para Glass Effect</h4>
+                <p>Crie efeitos de vidro com blur e glassmorphism.</p>
+                <code>backdrop-filter: blur(10px); background: rgba(255,255,255,0.1);</code>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section class="recursos" id="recursos">
+        <div class="recursos-header">
+            <span class="recursos-label">REFERÊNCIA</span>
+            <h2>Recursos para <span class="destaque">aprofundar</span>.</h2>
+            <p>Links, ferramentas e documentações para você ir além das aulas e explorar CSS em profundidade.</p>
+        </div>
+
+        <div class="recursos-grid">
+            <div class="recurso-card">
+                <div class="recurso-icon">📚</div>
+                <h3>Documentação Oficial</h3>
+                <p>Referência completa do CSS moderno diretamente do consórcio W3C.</p>
+                <a href="https://www.w3.org/TR/css/" target="_blank" class="recurso-link">W3C CSS ↗</a>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">🔍</div>
+                <h3>MDN Web Docs</h3>
+                <p>Guias, tutoriais e exemplos de todas as propriedades CSS.</p>
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" class="recurso-link">Acessar MDN ↗</a>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">⚙️</div>
+                <h3>DevTools do Navegador</h3>
+                <p>Inspecione e debug CSS em tempo real com as ferramentas do navegador.</p>
+                <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools" target="_blank" class="recurso-link">Saiba mais ↗</a>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">✔️</div>
+                <h3>CSS Validator</h3>
+                <p>Valide seu código CSS contra os padrões W3C.</p>
+                <a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="recurso-link">Validador W3C ↗</a>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">🎨</div>
+                <h3>Color Picker</h3>
+                <p>Ferramenta para escolher cores e converter entre formatos (hex, rgb, hsl).</p>
+                <a href="https://htmlcolorcodes.com/" target="_blank" class="recurso-link">HTML Color Codes ↗</a>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">📱</div>
+                <h3>Teste de Responsividade</h3>
+                <p>Teste como seu site fica em diferentes tamanhos de tela e dispositivos.</p>
+                <a href="https://responsivedesignchecker.com/" target="_blank" class="recurso-link">Responsive Checker ↗</a>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">🚀</div>
+                <h3>Can I Use?</h3>
+                <p>Compatibilidade de features CSS com navegadores modernos e antigos.</p>
+                <a href="https://caniuse.com/" target="_blank" class="recurso-link">Can I Use ↗</a>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">✨</div>
+                <h3>Animações CSS</h3>
+                <p>Biblioteca de animações CSS prontas para copiar e colar.</p>
+                <a href="https://animate.style/" target="_blank" class="recurso-link">Animate.css ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <a href="https://github.com/rhayssakramer/css-lab">CSS Lab</a>. Feito com 💙 para quem quer aprender CSS de verdade.</p>
+            <div class="footer-links">
+                <a href="#como-funciona">Sobre</a>
+                <a href="https://rhayssakramer.vercel.app/">Contato</a>
+                <a href="https://github.com/rhayssakramer" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <a href="#" class="scroll-to-top" id="scrollToTop">
+        <img src="./img/next.png" alt="↑">
+    </a>
+
+    <script src="js/aulas.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
